@@ -1,0 +1,24 @@
+[project]
+name = "cloud-hw3"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "tufan-ozkan",email = "tufanozkan.dev@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "celery (>=5.5.2,<6.0.0)",
+    "redis (>=6.1.0,<7.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "cloud_hw3", from = "src"}]
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
